@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Hi-Daniel - contact me</title>
+        <link rel="stylesheet" href="./index.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+                VANTA.BIRDS({
+                el: "#VANTA",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                birdSize: 1,
+                wingSpan: 18.00,
+                separation: 15.00,
+                alignment: 30.00,
+                cohesion: 30.00,
+                quantity: 2.00,
+                backgroundAlpha: 0
+                })
+            })
+            setTimeout(() => {
+                const main = document.querySelector('main')
+                main.style.opacity = 1
+                main.style.filter = 'blur(0px)'
+            }, 750)
+                
+        </script>
+    </head>
+    <body>
+        <div id="VANTA"></div>
+        <main>
+            <header>
+                <img src="./images/headshot.jpg" alt="Personal Photo" />
+                <h1>Hi-Daniel</h1>
+            </header>
+            <ul>
+                <li>
+                    <a href="https://hi-daniel.github.io">
+                        <img src="./images/Website.svg" alt="website-icon" width="25">
+                        About Me
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:dannyj.g@outlook.es">
+                        <img src="./images/Email.svg" alt="email-icon" width="25">
+                        Email
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/jimenezgildaniel/">
+                        <img src="./images/LinkedIn.svg" alt="linkedin-icon" width="25">
+                        LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Hi-Daniel">
+                        <img src="./images/GitHub.svg" alt="GitHub-icon" width="25">
+                        GitHub
+                    </a>
+                </li>
+            </ul>
+        </main>
+    </body>
+</html>
