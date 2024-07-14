@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hi-Daniel - contact me</title>
         <link rel="stylesheet" href="./contactMe.css">
+        <link rel="stylesheet" href="../menuToggle/menu.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
         <script>
@@ -45,6 +46,16 @@
         <div id="VANTA"></div>
         <main>
             <header>
+                <nav id="menu-container">
+                    <button id="menu-toggle" aria-label="Toggle Menu" style="color: white;">&#9776;</button>
+                    <menu id="my-menu">
+                      <li><a href="../index.html">home</a></li>
+                      <li><a href="../aboutMe/aboutMe.html">aboutMe</a></li>
+                      <li><a href=".">contactMe</a></li>
+                      <li><a href="./projects/projects.html">projects</a></li>
+                      <li><a href="https://sites.google.com/illinois.edu/alipour">myLab</a></li>
+                    </menu>
+                </nav>
                 <img src="./images/headshot.jpg" alt="Personal Photo" />
                 <a id="hi-daniel" href="https://hi-daniel.github.io">Hi-Daniel</a>
             </header>
@@ -80,5 +91,6 @@
                 <i>check out devaslife for website tutorial</i>
             </a>
         </footer>
+        <script src="../menuToggle/menuToggle.js"></script>
     </body>
 </html>
