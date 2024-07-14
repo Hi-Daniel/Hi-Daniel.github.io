@@ -1,10 +1,18 @@
 const cube = document.getElementById('cube');
 const header = document.getElementById('header');
 const subtitle = document.getElementById('subtitle');
+const menuToggle = document.getElementById('menu-toggle');
+const myMenu = document.getElementById('my-menu');
 let isDragging = false;
 let startX, startY;
 let currentX = 135; let currentY = 45;
 let initialTouchTarget = null;
+
+
+menuToggle.addEventListener('click', () => {
+    myMenu.style.opacity = myMenu.style.display === 'block' ? '0' : '1';
+    myMenu.style.display = myMenu.style.display === 'block' ? 'none' : 'block';
+});
 
 function handleStart(e) {
     isDragging = true;
