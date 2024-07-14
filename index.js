@@ -71,5 +71,9 @@ facecontainers.forEach(container => {
         if (initialTouchTarget && e.target === initialTouchTarget) {
             window.location.href = container.dataset.link;
         }
+        else {
+            header.textContent = 'Welcome to my Website!';
+            subtitle.textContent = 'hover over a face of the cube to explore my page';
+        }
     });
 })
