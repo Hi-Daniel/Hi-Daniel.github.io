@@ -35,7 +35,7 @@ document.addEventListener('mouseleave', () => {
 const facecontainers = document.querySelectorAll('.face-container');
 facecontainers.forEach(container => {
     container.addEventListener('mouseenter', () => {
-        header.textContent = 'Go To:'
+        header.textContent = 'Go To:';
         subtitle.textContent = container.dataset.face;
     });
     container.addEventListener('mouseleave', () => {
