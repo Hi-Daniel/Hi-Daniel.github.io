@@ -3,7 +3,7 @@ const header = document.getElementById('header');
 const subtitle = document.getElementById('subtitle');
 let isDragging = false;
 let startX, startY;
-let currentX = 0, currentY = 0;
+let currentX = 135; let currentY = 45;
 let initialTouchTarget = null;
 
 function handleStart(e) {
