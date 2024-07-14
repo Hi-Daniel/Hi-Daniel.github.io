@@ -25,14 +25,20 @@
                 cohesion: 30.00,
                 quantity: 2.00,
                 backgroundAlpha: 0
-                })
+                });
+                const home = document.getElementById('hi-daniel')
+                home.addEventListener('mouseenter', () => {
+                    home.textContent = "Go Home"
+                });
+                home.addEventListener('mouseleave', () => {
+                    home.textContent = "Hi-Daniel"
+                });
             })
             setTimeout(() => {
                 const main = document.querySelector('main')
                 main.style.opacity = 1
                 main.style.filter = 'blur(0px)'
             }, 750)
-                
         </script>
     </head>
     <body>
@@ -40,11 +46,11 @@
         <main>
             <header>
                 <img src="./images/headshot.jpg" alt="Personal Photo" />
-                <h1>Hi-Daniel</h1>
+                <a id="hi-daniel" href="https://hi-daniel.github.io">Hi-Daniel</a>
             </header>
             <ul>
                 <li>
-                    <a href="https://hi-daniel.github.io">
+                    <a href="https://hi-daniel.github.io/aboutMe">
                         <img src="./images/Website.svg" alt="website-icon" width="25">
                         About Me
                     </a>
