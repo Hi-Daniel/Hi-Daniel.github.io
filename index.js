@@ -3,7 +3,57 @@ const header = document.getElementById('header');
 const subtitle = document.getElementById('subtitle');
 let isDragging = false;
 let startX, startY;
-let currentX = 135; let currentY = 45;
+let currentMat = [0.7071067811865476,0.30997521057108,0.6355433650282367,0,
+                 0,0.898794046299167,-0.4383711467890774,0,
+                -0.7071067811865475,0.3099752105710801,0.6355433650282368,0,
+                  0., 0., 0., 1.];
+
+
+function rotX(roll) {
+    let rollRad = roll * Math.PI / 180;
+
+    return [
+        1, 0, 0, 0,
+        0, Math.cos(rollRad), -Math.sin(rollRad), 0,
+        0, Math.sin(rollRad), Math.cos(rollRad), 0,
+        0, 0, 0, 1
+    ]
+}    
+
+function rotZ(yaw) {
+    let yawRad = yaw * Math.PI / 180;
+    return [
+        Math.cos(yawRad), -Math.sin(yawRad), 0, 0,
+        Math.sin(yawRad), Math.cos(yawRad), 0, 0,
+        0, 0, 1, 0,
+        0, 0, 0, 1
+    ]
+}
+
+function rotY(pitch){
+    let pitchRad = pitch * Math.PI / 180;
+    return [
+        Math.cos(pitchRad), 0, Math.sin(pitchRad), 0,
+        0, 1, 0, 0,
+        -Math.sin(pitchRad), 0, Math.cos(pitchRad), 0,
+        0, 0, 0, 1
+    ]
+}
+
+function matMult(a, b) {
+    let result = new Array(16).fill(0);
+    for (let i = 0; i < 4; i++) {
+        for (let j = 0; j < 4; j++) {
+            for (let k = 0; k < 4; k++) {
+                result[i * 4 + j] += a[i * 4 + k] * b[k * 4 + j];
+            }
+        }
+    }
+    return result;
+}
+
+cube.style.transform = `matrix3d(${currentMat})`;
+
 let initialTouchTarget = null;
 
 function handleStart(e) {
@@ -20,9 +70,10 @@ function handleMove(e) {
         if (pageX !== undefined && pageY !== undefined) {
             const deltaX = (pageX - startX) / window.innerWidth * 360;
             const deltaY = (pageY - startY) / window.innerHeight * 360;
-            currentX += deltaX;
-            currentY -= deltaY;
-            cube.style.transform = `rotateX(${currentY}deg) rotateY(${currentX}deg)`;
+            xRotation = rotY(-deltaX);
+            yRotation = rotX(deltaY);
+            currentMat = matMult(currentMat, matMult(xRotation, yRotation));
+            cube.style.transform = `matrix3d(${currentMat})`;
             startX = pageX;
             startY = pageY;
         }
