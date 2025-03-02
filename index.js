@@ -1,13 +1,22 @@
 const cube = document.getElementById('cube');
 const header = document.getElementById('header');
 const subtitle = document.getElementById('subtitle');
+const xSlider = document.getElementById('x-slider');
+const ySlider = document.getElementById('y-slider');
 let isDragging = false;
 let startX, startY;
-let currentMat = [0.7071067811865476,0.30997521057108,0.6355433650282367,0,
-                 0,0.898794046299167,-0.4383711467890774,0,
-                -0.7071067811865475,0.3099752105710801,0.6355433650282368,0,
-                  0., 0., 0., 1.];
+let currentYRotation = 45;
+let currentXRotation = 35;
+let currentMat = matMult(rotX(currentYRotation), rotY(currentXRotation));
 
+xSlider.style.background = 'linear-gradient(to right, #333 0%, #ccc 0%, #333 10%)';
+ySlider.style.background = 'linear-gradient(to right, #333 0%, #ccc 0%, #333 10%)';
+
+function updateSlider(slider, rotation){
+    let mod360 = (rotation % 360 + 540) % 360;
+    let percent = (mod360) * (100 / 360);
+    slider.style.background = `linear-gradient(to right, #333 ${percent-10}%, #ccc ${percent}%, #333 ${percent+10}%)`;
+}
 
 function rotX(roll) {
     let rollRad = roll * Math.PI / 180;
@@ -53,6 +62,8 @@ function matMult(a, b) {
 }
 
 cube.style.transform = `matrix3d(${currentMat})`;
+updateSlider(xSlider, currentXRotation);
+updateSlider(ySlider, currentYRotation);
 
 let initialTouchTarget = null;
 
@@ -72,8 +83,12 @@ function handleMove(e) {
             const deltaY = (pageY - startY) / window.innerHeight * 360;
             xRotation = rotY(-deltaX);
             yRotation = rotX(deltaY);
+            currentXRotation = currentXRotation + deltaX;
+            currentYRotation = currentYRotation + deltaY;
             currentMat = matMult(currentMat, matMult(xRotation, yRotation));
             cube.style.transform = `matrix3d(${currentMat})`;
+            updateSlider(xSlider, currentXRotation);
+            updateSlider(ySlider, currentYRotation);
             startX = pageX;
             startY = pageY;
         }
