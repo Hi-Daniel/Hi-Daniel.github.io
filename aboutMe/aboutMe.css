@@ -1,0 +1,98 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #353530;
+    font-size: 1.5vh;
+    color: #003049;
+}
+a {
+    text-decoration: none;
+    color: #FDF0D5;
+}
+header {
+    color: #003049;
+    font-size: 2.5vh;
+    font-weight: bold;
+}
+h2 {
+    color: #669BBC;
+    font-size: 2vh;
+    font-weight: bold;
+}
+hr {
+    border: none;
+    height: 1px;
+    width: 100%;
+    background-color: #003049;
+    margin: 20px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 100px;
+}
+
+#menu-toggle {
+    color: #FDF0D5;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: row;
+    height: fit-content;
+    margin: 10vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.main-container {
+    background-color: #FDF0D5;
+    max-width: 62.5vh;
+    height: fit-content;
+    justify-items: center;
+    justify-self: center;
+    padding: 2.5vh;
+}
+
+
+#blurb {
+    padding: 2.5vh;
+    background-color: #669BBC;  
+    color: #003049;
+    font-size: 1.5vh;
+}
+
+#profile_pic {
+    width: 25vh;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 2.5vh;
+    border: 5px solid #780000;
+}
+
+.title {
+    font-size: large;
+}
+
+@media screen and (max-width: 768px) {
+    #menu-toggle {
+        color: #003049;
+    }
+    .center {
+        margin: 0;
+    }
+    .main-container {
+        margin: 0;
+        max-width: 100%;
+    }
+}
