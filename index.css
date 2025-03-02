@@ -45,16 +45,24 @@ h4 {
     margin-top: 100px;
 }
 
-footer {
+hr {
     position: relative;
+    bottom: 0;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+footer {
+    position: absolute;
+    height: 20px;
     display: flex;
     flex-direction: row;    
     justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
-    margin: 20px 0;
-    align-items: center;
+    gap: 100px;
+    padding: 10px;
+    margin: 0px 0;
     bottom: 0;
+    align-items: center;
     text-align: center;
     color: #707070;
 }
@@ -66,8 +74,6 @@ footer > a {
     text-decoration: none;
     color: #707070;
 }
-
-
 
 .wheel-container {
     display: flex;
