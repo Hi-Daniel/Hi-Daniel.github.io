@@ -3,6 +3,8 @@ body, html {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: #ffff;
+    overflow: hidden;
+    overscroll-behavior: none;
 }
 
 #VANTA {
