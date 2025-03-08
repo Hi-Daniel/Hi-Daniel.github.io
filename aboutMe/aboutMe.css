@@ -39,6 +39,10 @@ ul {
     color: #FDF0D5;
 }
 
+#toggle-theme {
+    color: #FDF0D5;
+}
+
 .center {
     display: flex;
     justify-content: center;

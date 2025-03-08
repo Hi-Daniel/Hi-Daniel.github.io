@@ -1,4 +1,11 @@
 
+#toggle-theme {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
 #menu-container {
     position: absolute;
     top: 5px;

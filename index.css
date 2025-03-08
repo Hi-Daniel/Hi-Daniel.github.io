@@ -1,6 +1,6 @@
 html {
     overscroll-behavior: none;
-    user-select: none;
+    user-select: none;  
 }
 body {
     display: flex;
@@ -27,7 +27,7 @@ body::-webkit-scrollbar{
 h1 {
     /* position: absolute;
     top: 1.5rem; */
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     vertical-align: top;
     text-align: center;
     font-size: 2rem;
@@ -36,14 +36,14 @@ h1 {
 h2 {
     /* position: absolute;
     top: 4rem; */
-    margin: 20px;
+    /* margin: 20px; */
     text-align: center;
     font-size: 1.5rem;
 }
 
-h4 {
+/* h4 {
     margin-top: 100px;
-}
+} */
 
 hr {
     position: relative;
@@ -54,7 +54,7 @@ hr {
 
 footer {
     position: absolute;
-    height: 20px;
+    height: 10px;
     display: flex;
     flex-direction: row;    
     justify-content: space-between;
@@ -200,6 +200,16 @@ footer > a {
 .bottom { transform: rotateX(-90deg) translateZ(100px);
     background-color: #669BBC; }
 
+
+.dark-mode {
+    background-color: #353530;
+    color: #FDF0D5;
+}
+
+#menu-toggle.dark-mode {
+    color: #FDF0D5;
+}
+    
 @media (max-width: 600px) {
     h1 {
         font-size: 2rem;
