@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.main-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+    color: #003049;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.links a {
+    color: #003049;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #669bbc;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e9ecef;
+    margin: 2rem 0;
+}
+
+.container {
+    margin-bottom: 2rem;
+}
+
+.container header {
+    color: #003049;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Substack Feed Styles */
+#substack-feed-embed {
+    margin: 1rem 0;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    color: #707070;
+    margin-top: 2rem;
+}
+
+.github-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #707070;
+    text-decoration: none;
+    margin-top: 0.5rem;
+}
+
+.github-container:hover {
+    color: #003049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .container header {
+        font-size: 1.2rem;
+    }
+}
