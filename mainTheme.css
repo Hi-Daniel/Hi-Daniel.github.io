@@ -1,0 +1,193 @@
+/*
+Script to set website wide colors for light and dark mode
+*/
+
+/* Light mode / default colors */
+body {
+    --background-color: #f8f9fa;
+    --text-color: #003049;
+    --text-color-light: #4d4d4d;
+    --accent-color: #669bbc;
+    --border-color: #e9ecef;
+    --menu-text: #003049;
+    --container1-color: white;
+    --container2-color: #f8f9fa;
+    --footer-text-color: #707070;
+}
+
+/* Dark mode colors */
+body.dark-mode {
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+    --text-color-light: #c1bcbc;
+    --accent-color: #cba6f7;
+    --border-color: #414141;
+    --menu-text: #ffffff;
+    --container1-color: #2d2d2d;
+    --container2-color: #404040;
+    --footer-text-color: #808080;
+}
+
+/* Apply CSS variables */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 1.8vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a>svg {
+    fill: var(--text-color);
+}
+
+#menu-toggle, #toggle-theme {
+    color: var(--menu-text);
+}
+
+#my-menu {
+    background-color: var(--background-color);
+}
+
+#my-menu > li > a {
+    color: var(--text-color);
+}
+
+#my-menu > li > a:hover {
+    color: var(--background-color);
+    background-color: var(--text-color);
+}
+
+.container1 {
+    background-color: var(--container1-color);
+    margin: 2rem;
+    width: 100%;
+}
+
+.container2 {
+    background-color: var(--container2-color);
+    display: flex;
+}
+
+.main-title {
+    color: var(--text-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.title1 {
+    color: var(--text-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.title2 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: var(--accent-color);
+}
+
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 2rem 0;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 100px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    color: var(--footer-text-color);
+    margin-top: 2rem;
+}
+
+.github-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--footer-text-color);
+    text-decoration: none;
+    margin-top: 0.5rem;
+}
+
+.github-container:hover {
+    color: var(--footer-text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .main-container {
+        padding: 0rem;
+        margin: 0rem;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+    }
+
+    body {
+        background-color: var(--container1-color);
+    }
+
+    .container1 {
+        margin: 0rem;
+    }
+
+    .title1 {
+        font-size: 1.5rem;
+    }
+    
+    #menu-toggle, #toggle-theme {
+        color: var(--text-color);
+    }
+
+}

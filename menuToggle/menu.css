@@ -14,10 +14,10 @@
 }
   
 #menu-toggle {
-background: none;
-border: none;
-font-size: 2rem;
-cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 #my-menu {
