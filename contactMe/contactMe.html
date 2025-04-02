@@ -4,34 +4,23 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hi-Daniel - contact me</title>
-        <link rel="stylesheet" href="./contactMe.css">
         <link rel="stylesheet" href="../menuToggle/menu.css">
+        <link rel="stylesheet" href="../mainTheme.css">
+        <link rel="stylesheet" href="./contactMe.css">
         <link rel="icon" type="image/x-icon" href="../favicon.png">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
         <script>
             window.addEventListener('DOMContentLoaded', () => {
+                const color1 = getComputedStyle(document.body).getPropertyValue('--container2-color');
+                const color2 = getComputedStyle(document.body).getPropertyValue('--accent-color');
+                const home = document.getElementById('hi-daniel')
                 VANTA.BIRDS({
                 el: "#VANTA",
-                mouseControls: true,
-                touchControls: true,
-                gyroControls: false,
-                minHeight: 200.00,
-                minWidth: 200.00,
-                scale: 1.00,
-                scaleMobile: 1.00,
-                birdSize: 1,
-                wingSpan: 30.00,
-                separation: 15.00,
-                alignment: 60.00,
-                cohesion: 50.00,
-                quantity: 5.00,
                 backgroundAlpha: 0,
-                colorMode: "lerp",
-                color1: "#003049",
-                color2: "#669BBC",
+                color1: color1,
+                color2: color2,
                 });
-                const home = document.getElementById('hi-daniel')
                 home.addEventListener('mouseenter', () => {
                     home.textContent = "Go Home"
                 });
@@ -51,7 +40,8 @@
         <main>
             <header>
                 <nav id="menu-container">
-                    <button id="menu-toggle" aria-label="Toggle Menu" style="color: white;">&#9776;</button>
+                    <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+                    <button id="toggle-theme" aria-label="Toggle Theme">&#9788;</button>
                     <menu id="my-menu">
                       <li><a href="../index.html">home</a></li>
                       <li><a href="../aboutMe/aboutMe.html">aboutMe</a></li>
@@ -65,9 +55,9 @@
             </header>
             <ul>
                 <li>
-                    <a href="https://hi-daniel.github.io/aboutMe">
+                    <a href="../index.html">
                         <img src="./images/Website.svg" alt="website-icon" width="25">
-                        About Me
+                        Personal Website
                     </a>
                 </li>
                 <li>
