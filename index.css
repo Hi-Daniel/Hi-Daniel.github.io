@@ -13,7 +13,7 @@ body {
     right: 0;
     left: 0;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: var(--background-color);
     perspective: 1000px;
     font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
     overflow: hidden;
@@ -64,7 +64,7 @@ footer {
     bottom: 0;
     align-items: center;
     text-align: center;
-    color: #707070;
+    color: var(--footer-text-color);
     font-size: 2vmin;
 }
 
@@ -73,7 +73,7 @@ footer > a {
     flex-direction: row;
     align-items: center;
     text-decoration: none;
-    color: #707070;
+    color: var(--footer-text-color);
 }
 
 .wheel-container {
@@ -87,7 +87,7 @@ footer > a {
     width: 100px;
     height: 10px;
     border-radius: 5px;
-    background: linear-gradient(to right, #333 0%, #ccc 0%, #333 10%);
+    background: linear-gradient(to right, var(--container1-color) 0%, var(--accent-color) 0%, var(--container1-color) 10%);
     box-shadow: 
         inset -2px 0 4px rgba(0, 0, 0, 0.7),  /* Left inner */
         inset 2px 0 4px rgba(0, 0, 0, 0.7),   /* Right inner */
@@ -153,7 +153,7 @@ footer > a {
     position: absolute;
     width: 200px;
     height: 200px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     transition: transform 0.3s, box-shadow 0.3s;
     transform-origin: center;
 }
@@ -175,10 +175,11 @@ footer > a {
     height: 100%;
     padding: 0 0 0 0;
     align-items: center;
-    color: #f0f0f0;
-    font-size: 1.5rem;
+    color: var(--text-color);
+    font-size: 2rem;
     font-weight: bold;
     text-align: center;
+    overflow: hidden;
 }
 
 .face:hover {
@@ -200,15 +201,6 @@ footer > a {
 .bottom { transform: rotateX(-90deg) translateZ(100px);
     background-color: #669BBC; }
 
-
-.dark-mode {
-    background-color: #353530;
-    color: #FDF0D5;
-}
-
-#menu-toggle.dark-mode {
-    color: #FDF0D5;
-}
     
 @media (max-width: 600px) {
     h1 {

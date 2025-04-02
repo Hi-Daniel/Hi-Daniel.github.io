@@ -9,13 +9,13 @@ let currentYRotation = 45;
 let currentXRotation = 35;
 let currentMat = matMult(rotX(currentYRotation), rotY(currentXRotation));
 
-xSlider.style.background = 'linear-gradient(to right, #333 0%, #ccc 0%, #333 10%)';
-ySlider.style.background = 'linear-gradient(to right, #333 0%, #ccc 0%, #333 10%)';
+xSlider.style.background = 'linear-gradient(to right, var(--container1-color) 0%, var(--text-color) 0%, var(--container1-color) 10%)';
+ySlider.style.background = 'linear-gradient(to right, var(--container1-color) 0%, var(--text-color) 0%, var(--container1-color) 10%)';
 
 function updateSlider(slider, rotation){
     let mod360 = (rotation % 360 + 540) % 360;
     let percent = (mod360) * (100 / 360);
-    slider.style.background = `linear-gradient(to right, #333 ${percent-10}%, #ccc ${percent}%, #333 ${percent+10}%)`;
+    slider.style.background = `linear-gradient(to right, var(--container1-color) ${percent-10}%, var(--text-color) ${percent}%, var(--container1-color) ${percent+10}%)`;
 }
 
 function rotX(roll) {
