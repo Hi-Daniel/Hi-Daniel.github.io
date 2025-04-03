@@ -112,7 +112,7 @@ document.addEventListener('mouseleave', handleEnd);
 
 document.addEventListener('touchstart', handleStart);
 document.addEventListener('touchmove', handleMove);
-document.addEventListener('touchend', handleEnd);
+// document.addEventListener('touchend', handleEnd);
 
 const facecontainers = document.querySelectorAll('.face-container');
 facecontainers.forEach(container => {
@@ -128,18 +128,11 @@ facecontainers.forEach(container => {
         window.location.href = container.dataset.link;
     });
     container.addEventListener('touchstart', (e) => {
-        e.stopPropagation();
         header.textContent = 'Go To:';
         subtitle.textContent = container.dataset.face;
     });
     container.addEventListener('touchend', (e) => {
-        e.stopPropagation();
-        if (initialTouchTarget && e.target === initialTouchTarget) {
-            window.location.href = container.dataset.link;
-        }
-        else {
-            header.textContent = 'Welcome to my Website!';
-            subtitle.textContent = 'hover over a face of the cube to explore my page';
-        }
+        header.textContent = 'Welcome to my Website!';
+        subtitle.textContent = 'hover over a face of the cube to explore my page';
     });
 })

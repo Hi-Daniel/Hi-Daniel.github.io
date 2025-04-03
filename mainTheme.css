@@ -95,6 +95,11 @@ a>svg {
     font-weight: bold;
 }
 
+.subtitle {
+    color: var(--text-color-light);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
 
 .center {
     position: relative;
@@ -102,6 +107,10 @@ a>svg {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.center-text {
+    text-align: center;
 }
 
 .padding-container {

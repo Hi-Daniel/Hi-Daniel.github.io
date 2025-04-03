@@ -24,25 +24,22 @@ body::-webkit-scrollbar{
     display: none;
 }
 
-h1 {
-    /* position: absolute;
-    top: 1.5rem; */
-    /* margin-bottom: 20px; */
-    vertical-align: top;
-    text-align: center;
-    font-size: 2rem;
+body {
+    --front-color: #fdf0d5;
+    --back-color: #fdf0d5;
+    --left-color: #003049;
+    --right-color: #003049;
+    --top-color: #780000;
+    --bottom-color: #780000;
 }
 
-h2 {
-    /* position: absolute;
-    top: 4rem; */
-    /* margin: 20px; */
-    text-align: center;
-    font-size: 1.5rem;
-}
-
-/* h4 {
-    margin-top: 100px;
+/* body.dark-mode {
+    --front-color: #e0e1dd;
+    --back-color: #e0e1dd;
+    --left-color: #0d1b2a;
+    --right-color: #0d1b2a;
+    --top-color: #778da9; 
+    --bottom-color: #778da9;
 } */
 
 hr {
@@ -54,7 +51,7 @@ hr {
 
 footer {
     position: absolute;
-    height: 10px;
+    height: 2.2rem;
     display: flex;
     flex-direction: row;    
     justify-content: space-between;
@@ -65,7 +62,7 @@ footer {
     align-items: center;
     text-align: center;
     color: var(--footer-text-color);
-    font-size: 2vmin;
+    font-size: 0.5rem;
 }
 
 footer > a {
@@ -102,6 +99,7 @@ footer > a {
 }
 
 .cube-rotation-container {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -140,46 +138,39 @@ footer > a {
 
 
 .cube {
-    width: 200px;
-    height: 200px;
-    margin-top: 100px;
     position: relative;
+    width: 20vmin;
+    height: 20vmin;
+    margin-top: 100px;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
     transform: rotateX(45deg) rotateY(135deg);
+    -webkit-transform: rotateX(45deg) rotateY(135deg);
     transition: transform 0.1s;
 }
 
-.cube div {
-    position: absolute;
-    width: 200px;
-    height: 200px;
+.face-container {    
     border: 1px solid var(--border-color);
-    transition: transform 0.3s, box-shadow 0.3s;
-    transform-origin: center;
-}
-
-.face-container {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width:  100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    transform-origin: center;
 }
 
 .face {
-    display: grid;
     width: 100%;
     height: 100%;
+    display: grid;
     padding: 0 0 0 0;
     align-items: center;
-    color: var(--text-color);
-    font-size: 2rem;
+    font-size: 4vmin;
     font-weight: bold;
     text-align: center;
     overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    transform-origin: center;
 }
 
 .face:hover {
@@ -187,19 +178,24 @@ footer > a {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 }
 
-
-.front  { transform: translateZ(100px); 
-    background-color: #FDF0D5;}
-.back   { transform: rotateY(180deg) translateZ(100px);
-    background-color: #FDF0D5;}
-.left   { transform: rotateY(-90deg) translateZ(100px);
-    background-color: #C1121F; }
-.right  { transform: rotateY(90deg) translateZ(100px);
-    background-color: #C1121F; }
-.top    { transform: rotateX(90deg) translateZ(100px);
-    background-color: #669BBC; }
-.bottom { transform: rotateX(-90deg) translateZ(100px);
-    background-color: #669BBC; }
+.front  { transform: translateZ(10vmin); 
+    background-color: var(--front-color);
+    color: var(--left-color);}
+.back   { transform: rotateY(180deg) translateZ(10vmin);
+    background-color: var(--back-color);
+    color: var(--right-color);}
+.left   { transform: rotateY(-90deg) translateZ(10vmin);
+    background-color: var(--left-color);
+    color: var(--front-color);}
+.right  { transform: rotateY(90deg) translateZ(10vmin);
+    background-color: var(--right-color);
+    color: var(--front-color);}
+.top    { transform: rotateX(90deg) translateZ(10vmin);
+    background-color: var(--top-color);
+    color: var(--front-color);}
+.bottom { transform: rotateX(-90deg) translateZ(10vmin);
+    background-color: var(--bottom-color);
+    color: var(--front-color);}
 
     
 @media (max-width: 600px) {
