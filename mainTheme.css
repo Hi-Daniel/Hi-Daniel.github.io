@@ -97,10 +97,15 @@ a>svg {
 
 
 .center {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.padding-container {
+    padding: 2rem;
 }
 
 .main-container {
@@ -171,6 +176,9 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 800px) {
+    .center {
+        top: 2rem; /* Adjust for nav bar */
+    }
     .main-container {
         padding: 0rem;
         margin: 0rem;
