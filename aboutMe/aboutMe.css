@@ -1,5 +1,7 @@
 #blurb {
     padding: 2.5vh;
+    display: flex;
+    flex-direction: column;
 }
 
 #profile_pic {

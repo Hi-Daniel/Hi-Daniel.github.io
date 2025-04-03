@@ -1,6 +1,5 @@
 const menuToggle = document.getElementById('menu-toggle');
 const myMenu = document.getElementById('my-menu');
-
 // Function to set cookie
 function setCookie(name, value, days) {
     let expires = "";
@@ -24,40 +23,45 @@ function getCookie(name) {
     return null;
 }
 
-// if toggle theme is found, add event listener
+
+// dark vs light mode management
+let isDark = false;
 const toggleTheme = document.getElementById('toggle-theme');
+function change_icon(isDark) {
+    toggleTheme.innerHTML = isDark ? '🌚' : '🌞';
+}
+function setDarkMode(isDark) {
+    document.body.classList.toggle('dark-mode', isDark);
+    if (toggleTheme) {
+        change_icon(isDark);
+    }
+}
+const savedTheme = getCookie('theme-preference');
+// Check for saved preference in cookie first
+if (savedTheme) {
+    setDarkMode(savedTheme === 'dark');
+} else {
+    // If no saved preference, check system preference
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setDarkMode(prefersDarkMode);
+    // Save system preference to cookie
+    setCookie('theme-preference', prefersDarkMode ? 'dark' : 'light', 365);
+}
+
+// Listen for system dark mode changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    setDarkMode(e.matches);
+    // Save system preference to cookie when it changes
+    setCookie('theme-preference', e.matches ? 'dark' : 'light', 365);
+});
+
+// if toggle theme is found, add event listener
 if (toggleTheme) {
     toggleTheme.addEventListener('click', () => {
-        const isDark = !document.body.classList.contains('dark-mode');
+        isDark = !document.body.classList.contains('dark-mode');
         setDarkMode(isDark);
         // Save preference to cookie
         setCookie('theme-preference', isDark ? 'dark' : 'light', 365);
-    });
-
-    // Check for saved preference in cookie first
-    const savedTheme = getCookie('theme-preference');
-    if (savedTheme) {
-        setDarkMode(savedTheme === 'dark');
-    } else {
-        // If no saved preference, check system preference
-        const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        setDarkMode(prefersDarkMode);
-        // Save system preference to cookie
-        setCookie('theme-preference', prefersDarkMode ? 'dark' : 'light', 365);
-    }
-
-    function setDarkMode(isDark) {
-        document.body.classList.toggle('dark-mode', isDark);
-        menuToggle.classList.toggle('dark-mode', isDark);
-        toggleTheme.classList.toggle('dark-mode', isDark); 
-        toggleTheme.innerHTML = isDark ? '&#9789;' : '&#9788;';
-    }
-    
-    // Listen for system dark mode changes
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-        setDarkMode(e.matches);
-        // Save system preference to cookie when it changes
-        setCookie('theme-preference', e.matches ? 'dark' : 'light', 365);
     });
 }
 

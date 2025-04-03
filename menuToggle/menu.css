@@ -1,5 +1,5 @@
 
-#toggle-theme {
+#toggle-theme, #return-home, #menu-toggle {
     background: none;
     border: none;
     font-size: 2rem;
@@ -13,13 +13,6 @@
     text-align: left;
 }
   
-#menu-toggle {
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
 #my-menu {
 display: none;
 opacity: 0;

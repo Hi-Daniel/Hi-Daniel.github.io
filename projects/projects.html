@@ -12,7 +12,8 @@
 <body>
     <nav id="menu-container">
         <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
-        <button id="toggle-theme" aria-label="Toggle Theme">&#9788;</button>
+        <button id="toggle-theme" aria-label="Toggle Theme">🌚</button>
+        <a href="../index.html" id="return-home" aria-label="Return Home">🏡</a>
         <menu id="my-menu">
           <li><a href="../index.html">home</a></li>
           <li><a href="../aboutMe/aboutMe.html">aboutMe</a></li>
@@ -42,9 +43,17 @@
                     </svg>
                 </a>
             </div>
+            <div class="container1 center">
+                <div class="container2 main-container" style="text-align: center;padding: 0.5rem">
+                    <p>
+                        This page is a list of my substack posts, where I will be posting about the projects I have completed, and other things I'm interested in.
+                        I'm also working on a few projects that I'm excited to share, so stay tuned!
+                    </p>
+                </div>
+            </div>
             <hr>
             <div class="container1 center">
-                <header class="title1">Blog Posts</header>
+                <header class="title1">Substack Posts</header>
                 <div id="substack-feed-embed"></div>
                 <script>
                 window.SubstackFeedWidget = {

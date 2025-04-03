@@ -35,7 +35,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    font-size: 1.8vh;
+    font-size: 0.9rem;
 }
 
 a {
@@ -47,7 +47,7 @@ a>svg {
     fill: var(--text-color);
 }
 
-#menu-toggle, #toggle-theme {
+#menu-toggle, #toggle-theme, #return-home {
     color: var(--menu-text);
 }
 
@@ -109,6 +109,11 @@ a>svg {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     width: 100%;
+}
+
+.highlight_link {
+    color: var(--accent-color);
+    text-decoration: underline;
 }
 
 .links {

@@ -5,9 +5,9 @@ const xSlider = document.getElementById('x-slider');
 const ySlider = document.getElementById('y-slider');
 let isDragging = false;
 let startX, startY;
-let currentYRotation = 45;
-let currentXRotation = 35;
-let currentMat = matMult(rotX(currentYRotation), rotY(currentXRotation));
+let currentYRotation = 30;
+let currentXRotation = 45;
+let currentMat = matMult(rotY(currentXRotation), rotX(currentYRotation));
 
 xSlider.style.background = 'linear-gradient(to right, var(--container1-color) 0%, var(--text-color) 0%, var(--container1-color) 10%)';
 ySlider.style.background = 'linear-gradient(to right, var(--container1-color) 0%, var(--text-color) 0%, var(--container1-color) 10%)';
