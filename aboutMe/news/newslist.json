@@ -1,0 +1,44 @@
+{
+    "news": [
+        {
+            "title": "Presented Research at Engineering Mechanics Institute 2025",
+            "date": "May 2025",
+            "img": "news/IMG_1183.jpg",
+            "content": "I presented my research titled 'Enabling structural inspection training and automation via visual search tracking' at the Engineering Mechanics Institute 2025. Getting to meet and interact with other researchers in the field was a great experience."
+        },
+        {
+            "title": "Awarded the Structural Engineering Futures Fund Scholarship to attend SEI Congress",
+            "date": "June 2025",
+            "img": "news/IMG_0201 2.JPG",
+            "content": "I'm honored and excited to have been awarded the Structural Engineering Futures Fund Scholarship to attend SEI Congress 2025. This scholarship supported my attendance at the conference and allowing me to present a talk titled 'Digitized Infrastructure Inspections via AI, Automation, and Sensing'. I look forward to advancing this work and sharing it with the community in the future.",
+            "url": "https://www.asce.org/communities/institutes-and-technical-groups/structural-engineering-institute/news/congrats-to-recipients-of-sei-futures-fund-scholarship-to-structures-congress-2025"
+        },
+        {
+            "title": "Completed Summer Pre-doctoral Institute (SPI)",
+            "date": "July 2025",
+            "img": "news/IMG_5468.jpg",
+            "content": "Completing the SPI program this summer was incredibly helpful in preparing for my PhD journey. I got to make valuable connections and long lasting friendships. The program culminated in a research symposium where I presented my summer research titled 'Evaluating 3D Reality Capture Paradigms in the Context of Digital Twins and Virtual Inspections'."
+        },
+        {
+            "title": "Awarded the Marion Bills Scholarship",
+            "date": "May 2024",
+            "img": "news/b41d4ca7-777c-40e5-a9d6-57144a7cf120 (1).jpg",
+            "content": "I am honored to have been awarded the Marion Bills Scholarship for academic achievement during my undergraduate studies with special recognition during our graduation ceremony. My time at UHart has shaped me into a better person and I am grateful for the support and opportunities I have had.",
+            "url": "https://www.hartford.edu/unotes/2024/04/daniel-jimenez-gil-24-receives-belle-k-ribicoff-prize.aspx"
+        },
+        {
+            "title": "Transportation Research Board 2024",
+            "date": "January 2024",
+            "img": "news/IMG_4808.jpg",
+            "content": "I presented my research titled 'A Framework of Deep Neural Networks to Predict Bridge Condition Rating: Challenges and Opportunities' at the Transportation Research Board 2024.",
+            "url": "https://annualmeeting.mytrb.org/OnlineProgramArchive/Details/21031"
+        },
+        {
+            "title": "Research featured on media",
+            "img": "news/IMG_5217.jpg",
+            "date": "April 7, 2023",
+            "content": "Our research at the University of Hartford was featured by some local media outlets. It was exciting to share our work with the community and a great opportunity to practice my public speaking skills.",
+            "url": "https://www.courant.com/2023/04/07/uhart-ai-project-may-tell-us-which-bridges-need-work-sooner/"
+        }
+    ]
+}
