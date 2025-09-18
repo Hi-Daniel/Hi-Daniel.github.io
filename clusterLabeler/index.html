@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cluster Labeler</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="video_container">
+            <div class="question_container" id="question_container"></div>
+            <video id="video" controls>
+                <source src="4_inspection_w_aid.mp4" type="video/mp4">
+            </video>
+            <div class="bottom_info">
+                <p id="question_num">Question: 0/0</p>
+            </div>
+        </div>
+        <div class="settings">
+            <h1>Settings</h1>
+            <div class="settings_item">
+                <label for="user_number">Anonymous User Number</label>
+                <input type="number" id="user_number" placeholder="Anonymous User Number">
+            </div>
+            <div class="settings_item">
+                <label for="file_select">Select a video file</label>
+                <input type="file" id="file_select" accept="video/*">
+            </div>
+            <div class="settings_item">
+                <label for="save_filename">Save filename</label>
+                <input type="text" id="save_filename" placeholder="Save filename">
+            </div>
+            <div class="settings_item">
+                <button id="save_file">Save file</button>
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        <h1>Description</h1>
+        <div class="description_text">
+            <p>A set of inspectors were tasked with performing the highly complex task of bridge inspection in our simulation software. Tasked with identifying and documenting -through images- all of the cracks synthetically augmented on to a concrete bridge geometric model, these inspectors employed different search strategies. In order to better understand and quantify the processes used by the different inspectors we now attempt to provide labels to an inspector's behavior at different points in time.</p>
+            <p>In the video above you will see a replay of one bridge inspection. We overlayed the position on the screen where the inspector's eyes were focused at every point in time, signaled by the red dot. We also highlight the location of the cracks. However, the inspector was unable to see either of these features.</p>
+            <p>As you watch the video you will be asked to label the inspector's behavior at random points in time, or within the last second before the question. The video will speed up when there are no questions coming up, it will then slow down to allow you to watch at least 8 seconds prior to the question being asked. Finally, within the final second a border will be shown around the screen. You must pay attention during this time, then answer the question to the best of your abilities.</p>
+            <p>Some notes before you begin</p>
+            <ul>
+                <li>Remember to set your confidence level for each question</li>
+                <li>You may go back if you need to rewatch any part of the video</li>
+                <li>You may redo a question to change your answer by simply moving the video timer to a time before the question comes up.</li>
+                <li>You may read the explanations below if you have any issues disambiguating between two different labels.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="description">
+        <h1>Disambiguation Help</h1>
+        <div class="description_text">
+            <h2>Global Scan vs Local Inspection</h2>
+            <i>Is the inspector trying to focus on one specific point, or surveying a larger area to decide where to look next?</i>
+            <ul>
+                <li>One specific point: <strong>Local Inspection</strong></li>
+                <li>Larger area: <strong>Global Scan</strong></li>
+            </ul>
+
+            <h2>Orient & Navigate vs Global Scan</h2>
+            <i>Does this look more like moving to get a better view, or looking for issues from the current view?</i>
+            <ul>
+                <li>Moving to get a view: <strong>Orient & Position</strong></li>
+                <li>Looking for issues: <strong>Global Scan</strong></li>
+            </ul>
+
+            <h2>Orient & Navigate vs Local Inspection</h2>
+            <i>In this moment, is the main purpose examining this same defect, or nudging to get a better viewing position?</i>
+            <ul>
+                <li>Examining this same defect: <strong>Local Inspection</strong></li>
+                <li>Nudging to improve view: <strong>Orient & Navigate</strong></li>
+            </ul>
+
+            <h2>Not inspecting / Disengaged vs other states</h2>
+            <i>Is there a clear bridge target right now?</i>
+            <ul>
+                <li>No clear target / only interface or pause: <strong>Not inspecting / Disengaged</strong></li>
+                <li>Any clear target or search for one: pick <strong>Orient & Position</strong>, <strong>Global Scan</strong>, or <strong>Local Inspection</strong></li>
+            </ul>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
