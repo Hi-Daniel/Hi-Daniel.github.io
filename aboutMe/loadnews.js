@@ -43,7 +43,12 @@ function createNewsItem(newsItem) {
         <p class="date">${newsItem.date}</p>
         <p class="content">${newsItem.content}</p>`
     if (newsItem.url) {
-        newsContent.innerHTML += `<a href="${newsItem.url}" class="button">Read More</a>`;
+        if (newsItem.url_title) {
+            newsContent.innerHTML += `<a href="${newsItem.url}" class="button">${newsItem.url_title}</a>`;
+        }
+        else {
+            newsContent.innerHTML += `<a href="${newsItem.url}" class="button">Read More</a>`;
+        }
     }
     newsItemContainer.appendChild(newsContent);
     return newsItemContainer;

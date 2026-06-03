@@ -1,6 +1,13 @@
 {
     "news": [
         {
+            "title": "Engineering Mechanics Institute 2026: Boulder Colorado",
+            "date": "June 2026",
+            "content": "One year later I got to come back to EMI 2026 this time in Boulder, Colorado. Sharing my research and recieving useful feedback and expanding my knowledge with new ideas was incredibly timely. Thank you to everyone that I got to share this wonderful time with.",
+            "url": "../../Presentations/EMI26/emi26.html",
+            "url_title": "See my presentation"
+        },
+        {
             "title": "Presented Research at Engineering Mechanics Institute 2025",
             "date": "May 2025",
             "img": "news/IMG_1183.jpg",
